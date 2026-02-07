@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Página simples com fundamentos de HTML." />
+    <title>Fundamentos de HTML</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        line-height: 1.6;
+        background: #f5f7fb;
+        color: #1f2937;
+      }
+      header,
+      main,
+      footer {
+        max-width: 960px;
+        margin: auto;
+        padding: 1rem;
+      }
+      section,
+      article,
+      aside,
+      nav {
+        background: #fff;
+        border: 1px solid #dbe3ee;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #dbe3ee;
+        padding: 0.5rem;
+        text-align: left;
+      }
+      code {
+        background: #eef2ff;
+        padding: 0.1rem 0.3rem;
+        border-radius: 4px;
+      }
+      .grid {
+        display: grid;
+        gap: 1rem;
+      }
+      @media (min-width: 768px) {
+        .grid {
+          grid-template-columns: 2fr 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Fundamentos de HTML</h1>
+      <p>
+        Exemplo simples com as principais estruturas: texto, listas, links, imagens,
+        tabelas, formulário e semântica.
+      </p>
+      <nav aria-label="Navegação principal">
+        <a href="#texto">Texto</a> |
+        <a href="#listas">Listas</a> |
+        <a href="#midia">Mídia</a> |
+        <a href="#tabela">Tabela</a> |
+        <a href="#formulario">Formulário</a>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <article>
+        <section id="texto">
+          <h2>1. Texto e marcações</h2>
+          <p>
+            Em HTML usamos elementos como <strong>strong</strong>, <em>em</em>,
+            <mark>mark</mark> e <code>&lt;code&gt;</code> para dar significado ao conteúdo.
+          </p>
+          <blockquote cite="https://developer.mozilla.org/pt-BR/docs/Web/HTML">
+            “HTML descreve a estrutura de uma página da web.”
+          </blockquote>
+        </section>
+
+        <section id="listas">
+          <h2>2. Listas e links</h2>
+          <h3>Lista não ordenada</h3>
+          <ul>
+            <li>Elemento de bloco</li>
+            <li>Atributos</li>
+            <li>Semântica</li>
+          </ul>
+
+          <h3>Lista ordenada</h3>
+          <ol>
+            <li>Estruturar conteúdo</li>
+            <li>Aplicar estilo com CSS</li>
+            <li>Adicionar comportamento com JavaScript</li>
+          </ol>
+
+          <p>
+            Link externo:
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener noreferrer">
+              Guia HTML na MDN
+            </a>
+          </p>
+        </section>
+
+        <section id="midia">
+          <h2>3. Imagem e áudio</h2>
+          <figure>
+            <img
+              src="https://via.placeholder.com/800x250.png?text=Exemplo+de+Imagem"
+              alt="Imagem de exemplo com texto" width="100%"
+            />
+            <figcaption>Exemplo de uso de <code>&lt;img&gt;</code> e <code>&lt;figcaption&gt;</code>.</figcaption>
+          </figure>
+
+          <audio controls>
+            <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg" />
+            Seu navegador não suporta áudio HTML5.
+          </audio>
+        </section>
+
+        <section id="tabela">
+          <h2>4. Tabela</h2>
+          <table>
+            <caption>
+              Exemplo de tabela simples
+            </caption>
+            <thead>
+              <tr>
+                <th>Tag</th>
+                <th>Função</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>&lt;h1&gt;...&lt;h6&gt;</td>
+                <td>Títulos e subtítulos</td>
+              </tr>
+              <tr>
+                <td>&lt;p&gt;</td>
+                <td>Parágrafo</td>
+              </tr>
+              <tr>
+                <td>&lt;a&gt;</td>
+                <td>Link</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="formulario">
+          <h2>5. Formulário</h2>
+          <form action="#" method="post">
+            <p>
+              <label for="nome">Nome:</label><br />
+              <input type="text" id="nome" name="nome" required />
+            </p>
+            <p>
+              <label for="email">E-mail:</label><br />
+              <input type="email" id="email" name="email" required />
+            </p>
+            <p>
+              <label for="assunto">Assunto:</label><br />
+              <select id="assunto" name="assunto">
+                <option>Estudos HTML</option>
+                <option>Dúvida</option>
+                <option>Sugestão</option>
+              </select>
+            </p>
+            <p>
+              <label for="mensagem">Mensagem:</label><br />
+              <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+            </p>
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
+      </article>
+
+      <aside>
+        <h2>Dica rápida</h2>
+        <p>
+          Tente manter o HTML organizado com elementos semânticos como
+          <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code> e <code>&lt;footer&gt;</code>.
+        </p>
+        <details>
+          <summary>Ver abreviações úteis</summary>
+          <p><abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
+        </details>
+      </aside>
+    </main>
+
+    <footer>
+      <small>&copy; 2026 - Exemplo educativo de fundamentos HTML.</small>
+    </footer>
+  </body>
+</html>
