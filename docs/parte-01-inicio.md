@@ -60,7 +60,7 @@ Exemplo de mensagens de commit:
 - Rode `python3 exemplos/python/02_servidor_web_local.py --port 8000`.
 - Teste no navegador: `http://127.0.0.1:8000/`.
 - Teste API de saúde: `http://127.0.0.1:8000/health`.
-- Faça commit descrevendo o que é rota, status code e resposta JSON.
+- Faça commit descrevendo o que é rota, resposta HTTP e JSON.
 
 ## 5) Próximos passos (Parte 02)
 

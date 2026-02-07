@@ -64,11 +64,12 @@ class AprendizadoHandler(BaseHTTPRequestHandler):
 
         self._send_json(
             {
-                "status": "error",
-                "message": "Rota não encontrada",
-                "path": self.path,
-            },
-            status=404,
+                "status": "ok",
+                "message": "Rota não mapeada no exemplo didático.",
+                "path_recebido": self.path,
+                "rotas_disponiveis": ["/", "/health"],
+                "dica": "Use uma das rotas disponíveis para testar o servidor.",
+            }
         )
 
 
