@@ -42,3 +42,20 @@ git status
 git branch -a
 git log --oneline --graph --decorate -n 10
 ```
+
+## GitHub Pages
+
+O repositório já está preparado para publicar a página automaticamente usando GitHub Pages via GitHub Actions (`.github/workflows/github-pages.yml`).
+
+### Como ativar
+
+1. Faça merge desta branch na `main`.
+2. No GitHub, acesse **Settings > Pages**.
+3. Em **Build and deployment**, selecione **Source: GitHub Actions**.
+4. Após o próximo push na `main` (ou execução manual do workflow), o site será publicado.
+
+URL esperada:
+
+```text
+https://<seu-usuario>.github.io/AprendendoComCodex/
+```
