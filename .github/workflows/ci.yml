@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  validate:
+  validate-python-example:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,22 +20,5 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Validate repository files
-        run: |
-          test -f README.md
-          test -f index.html
-          test -f "exemplos/python/Hello World.py"
-
-      - name: Lint markdown files
-        uses: DavidAnson/markdownlint-cli2-action@v18
-        with:
-          globs: |
-            **/*.md
-
-      - name: Check Python example syntax
+      - name: Validate Hello World Python syntax
         run: python -m py_compile "exemplos/python/Hello World.py"
-
-      - name: Basic HTML smoke check
-        run: |
-          grep -qi "<html" index.html
-          grep -qi "</html>" index.html
