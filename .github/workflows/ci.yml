@@ -25,5 +25,8 @@ jobs:
           test -f index.html
           test -f "exemplos/python/Hello World.py"
 
+      - name: Run Python hello world example
+        run: python "exemplos/python/Hello World.py"
+
       - name: Check Python example syntax
         run: python -m py_compile "exemplos/python/Hello World.py"
