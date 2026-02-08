@@ -26,6 +26,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Validate root index.html
+        run: test -f index.html
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
